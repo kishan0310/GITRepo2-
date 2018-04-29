@@ -99,6 +99,7 @@ public class LibraryController  {
 			book.setBookId(bookBean.getBookId());
 		}
 		libService.saveLibBook(book);
+		logger.debug("Exit add book method");
 	}
 
 	/**
