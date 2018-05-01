@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ 
 
 package hello;
 
@@ -25,6 +25,7 @@ import org.junit.runner.RunWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -47,5 +48,9 @@ public class ApplicationTest {
         mockMvc.perform(get("/greeting").param("name", "SomeUser"))
                 .andExpect(content().string(containsString("Hello, SomeUser!")));
     }
+	 @Test
+	    public void greeting() throws Exception {
+	     System.out.println("Executed Junit");
+	    }
 
-}
+}*/
